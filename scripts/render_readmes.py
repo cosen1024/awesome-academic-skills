@@ -23,16 +23,6 @@ def cell(value: object) -> str:
     return html.escape(str(value), quote=False).replace("|", "&#124;").replace("\n", " ")
 
 
-def render_install(item: dict[str, object]) -> str:
-    method = cell(item["install_method"])
-    url = str(item["install_url"])
-    command = str(item.get("install_command") or "").strip()
-    output = f"[{method}]({url})"
-    if command:
-        output += f"<br><code>{cell(command)}</code>"
-    return output
-
-
 def render_catalog(data: dict[str, object], language: str) -> str:
     skills = data["skills"]
     assert isinstance(skills, list)
@@ -41,13 +31,18 @@ def render_catalog(data: dict[str, object], language: str) -> str:
         assert isinstance(category, dict)
         category_id = category["id"]
         title = category["name_zh" if language == "zh" else "name_en"]
+        table_header = (
+            "| 仓库 / Skill | 用途 |"
+            if language == "zh"
+            else "| Repository / Skill | Purpose |"
+        )
         lines.extend(
             [
                 "",
                 f"### {title}",
                 "",
-                "| Repository / Skill | Purpose | Agents / platforms | Install / entry | License | Status | Verified |",
-                "|---|---|---|---|---|---|---|",
+                table_header,
+                "|---|---|",
             ]
         )
         for item in skills:
@@ -59,12 +54,9 @@ def render_catalog(data: dict[str, object], language: str) -> str:
             source_url = item["source_url"]
             repository_url = item["repository_url"]
             purpose = item["purpose_zh" if language == "zh" else "purpose_en"]
-            platforms = " · ".join(cell(value) for value in item["platforms"])
             row = (
                 f"| [{repository}]({repository_url})<br>[{skill}]({source_url}) "
-                f"| {cell(purpose)} | {platforms} | {render_install(item)} "
-                f"| {cell(item['license'])} | {cell(item['verification_status'])} "
-                f"| {cell(item['verified_at'])} |"
+                f"| {cell(purpose)} |"
             )
             lines.append(row)
     lines.extend(["", END])

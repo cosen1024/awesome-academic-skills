@@ -6,6 +6,7 @@
 
 - `data/skills.yaml` 是条目事实的唯一来源；不要只改 README 表格。
 - `README.md` 与 `README_EN.md` 的清单区由 `scripts/render_readmes.py` 生成。
+- README 清单表格有意只展示仓库 / Skill 和用途；平台、安装、许可与核验字段保留在结构化数据中，不要自行扩回表格。
 - `docs/candidates.md` 保存待核验、暂缓或明确排除的候选，不应混入已验证主清单。
 - 技术事实只采用项目自己的 GitHub README、`SKILL.md`、官方文档或官方安装入口。
 
