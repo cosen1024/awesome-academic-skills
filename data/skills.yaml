@@ -1,0 +1,892 @@
+schema_version: 1
+catalog_version: 0.2.0
+last_verified: 2026-07-13
+verification_scope: >-
+  Public GitHub repository, first-party README or official documentation, exact
+  SKILL.md/plugin entry, and documented installation or entrypoint. Runtime
+  execution, security review, and research-quality evaluation are out of scope.
+
+categories:
+  - id: ideas
+    name_zh: 选题与 Idea
+    name_en: Topics and Ideas
+  - id: literature-search
+    name_zh: 文献检索
+    name_en: Literature Search
+  - id: reading-knowledge
+    name_zh: 论文阅读与知识管理
+    name_en: Paper Reading and Knowledge Management
+  - id: research-design
+    name_zh: 研究设计
+    name_en: Research Design
+  - id: experiment-code
+    name_zh: 实验与代码
+    name_en: Experiments and Code
+  - id: data-analysis
+    name_zh: 数据分析
+    name_en: Data Analysis
+  - id: paper-writing
+    name_zh: 论文写作
+    name_en: Paper Writing
+  - id: polishing-translation
+    name_zh: 润色与翻译
+    name_en: Polishing and Translation
+  - id: citation-latex
+    name_zh: 引用与 LaTeX
+    name_en: Citations and LaTeX
+  - id: scientific-plotting
+    name_zh: 科研绘图
+    name_en: Scientific Plotting
+  - id: pre-submission
+    name_zh: 投稿前检查
+    name_en: Pre-submission Checks
+  - id: peer-review-response
+    name_zh: 同行评审与审稿回复
+    name_en: Peer Review and Reviewer Response
+  - id: end-to-end
+    name_zh: 综合工作流
+    name_en: End-to-end Workflows
+
+skills:
+  - id: k-dense-scientific-brainstorming
+    category: ideas
+    entry_type: skill
+    repository: K-Dense-AI/scientific-agent-skills
+    repository_url: https://github.com/K-Dense-AI/scientific-agent-skills
+    license: MIT
+    source_ref: e12d68309994d5643c7c2ee00ce883f570916b7d
+    skill: scientific-brainstorming
+    skill_path: skills/scientific-brainstorming/SKILL.md
+    source_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/skills/scientific-brainstorming/SKILL.md
+    purpose_zh: 用开放式对话生成研究想法、跨学科连接、可检验假设与潜在研究缺口。
+    purpose_en: Generates research ideas, interdisciplinary connections, testable hypotheses, and potential gaps through open-ended dialogue.
+    platforms: [Agent Skills, Claude Code, Codex, Gemini CLI, Cursor, OpenClaw]
+    install_method: Skills CLI
+    install_command: npx skills add K-Dense-AI/scientific-agent-skills
+    install_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 仓库由 claude-scientific-skills 重命名而来；本条使用当前 canonical 地址。
+    notes_en: The repository was renamed from claude-scientific-skills; this entry uses the current canonical URL.
+
+  - id: orchestra-brainstorming-research-ideas
+    category: ideas
+    entry_type: skill
+    repository: Orchestra-Research/AI-Research-SKILLs
+    repository_url: https://github.com/Orchestra-Research/AI-Research-SKILLs
+    license: MIT
+    source_ref: 773a52944ba4747a18bd4ae9ade53fff041adcbc
+    skill: brainstorming-research-ideas
+    skill_path: 21-research-ideation/brainstorming-research-ideas/SKILL.md
+    source_url: https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/21-research-ideation/brainstorming-research-ideas/SKILL.md
+    purpose_zh: 用结构化框架探索问题空间、项目转向和已有工作的创新角度。
+    purpose_en: Uses structured frameworks to explore problem spaces, project pivots, and novel angles on existing work.
+    platforms: [Claude Code, Cursor, Gemini CLI, OpenCode, Hermes]
+    install_method: Orchestra installer
+    install_command: npx @orchestra-research/ai-research-skills
+    install_url: https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 安装器可按分类或单个 Skill 选择安装。
+    notes_en: The installer can install the full collection, a category, or selected skills.
+
+  - id: claude-scholar-research-ideation
+    category: ideas
+    entry_type: skill
+    repository: Galaxy-Dawn/claude-scholar
+    repository_url: https://github.com/Galaxy-Dawn/claude-scholar
+    license: MIT
+    source_ref: 2f7766fd541a723d4ddc6230b3277f948d61b093
+    skill: research-ideation
+    skill_path: skills/research-ideation/SKILL.md
+    source_url: https://github.com/Galaxy-Dawn/claude-scholar/blob/2f7766fd541a723d4ddc6230b3277f948d61b093/skills/research-ideation/SKILL.md
+    purpose_zh: 将模糊选题收敛为研究问题卡、证据需求、证伪条件、方法选择和下一步行动，并可衔接 Zotero、Obsidian、实验分析与写作流程。
+    purpose_en: Refines a vague topic into a research-question card, evidence needs, falsification criteria, method choices, and next actions, with optional Zotero, Obsidian, analysis, and writing handoffs.
+    platforms: [Claude Code, Codex CLI, Kimi Code CLI, OpenCode]
+    install_method: Claude Code setup script
+    install_command: >-
+      git clone https://github.com/Galaxy-Dawn/claude-scholar.git /tmp/claude-scholar &&
+      bash /tmp/claude-scholar/scripts/setup.sh
+    install_url: https://github.com/Galaxy-Dawn/claude-scholar/blob/2f7766fd541a723d4ddc6230b3277f948d61b093/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 主分支面向 Claude Code；Codex、Kimi Code 和 OpenCode 使用上游单独分支。Zotero 与 Obsidian 集成为可选依赖。
+    notes_en: The main branch targets Claude Code; Codex, Kimi Code, and OpenCode use separate upstream branches. Zotero and Obsidian integrations are optional.
+
+  - id: academic-search
+    category: literature-search
+    entry_type: skill
+    repository: Mingyue-Cheng/academic-search
+    repository_url: https://github.com/Mingyue-Cheng/academic-search
+    license: MIT
+    source_ref: 3ae684450bc0d24a9c4cb0b39ad08d3acb8f95fb
+    skill: academic-search
+    skill_path: SKILL.md
+    source_url: https://github.com/Mingyue-Cheng/academic-search/blob/3ae684450bc0d24a9c4cb0b39ad08d3acb8f95fb/SKILL.md
+    purpose_zh: 跨多个学术来源检索论文、规范化元数据、分析引用、判断开放获取并导出参考文献。
+    purpose_en: Searches multiple academic sources, normalizes metadata, analyzes citations, checks open access, and exports references.
+    platforms: [Claude Code]
+    install_method: Git clone
+    install_command: git clone https://github.com/Mingyue-Cheng/academic-search ~/.claude/skills/academic-search
+    install_url: https://github.com/Mingyue-Cheng/academic-search/blob/3ae684450bc0d24a9c4cb0b39ad08d3acb8f95fb/README.en.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 本地素材记录的 ustc-ai4science 地址与 README 使用的 Mingyue-Cheng 地址在核验日指向同一 HEAD；这里采用 README 的地址。
+    notes_en: The ustc-ai4science URL found in local notes and the Mingyue-Cheng URL used by the README resolved to the same HEAD; this catalog uses the README URL.
+
+  - id: cnki-search
+    category: literature-search
+    entry_type: skill
+    repository: cookjohn/cnki-skills
+    repository_url: https://github.com/cookjohn/cnki-skills
+    license: NOASSERTION
+    source_ref: 20d65f660456daf53ad0f7c74494ac3b829b925f
+    skill: cnki-search
+    skill_path: skills/cnki-search/SKILL.md
+    source_url: https://github.com/cookjohn/cnki-skills/blob/20d65f660456daf53ad0f7c74494ac3b829b925f/skills/cnki-search/SKILL.md
+    purpose_zh: 通过 Chrome DevTools MCP 操作中国知网页面，按关键词检索并提取结构化结果。
+    purpose_en: Uses Chrome DevTools MCP to operate CNKI pages, search by keyword, and extract structured results.
+    platforms: [Claude Code, Chrome DevTools MCP]
+    install_method: Git clone and copy
+    install_command: >-
+      git clone https://github.com/cookjohn/cnki-skills /tmp/cnki-skills &&
+      cp -r /tmp/cnki-skills/skills/ /tmp/cnki-skills/agents/ .claude/
+    install_url: https://github.com/cookjohn/cnki-skills/blob/20d65f660456daf53ad0f7c74494ac3b829b925f/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 下载能力仍依赖用户已登录的浏览器及合法机构权限；仓库根目录未发现许可证文件。
+    notes_en: Downloads still require an authenticated browser and legitimate institutional access; no repository-level license file was found.
+
+  - id: nature-reader
+    category: reading-knowledge
+    entry_type: skill
+    repository: Yuan1z0825/nature-skills
+    repository_url: https://github.com/Yuan1z0825/nature-skills
+    license: Apache-2.0
+    source_ref: 4170a8a6262642841699c55d468e21ff70a2fe34
+    skill: nature-reader
+    skill_path: skills/nature-reader/SKILL.md
+    source_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/skills/nature-reader/SKILL.md
+    purpose_zh: 将 PDF、DOI、arXiv 或正文转换为图表对齐、可追溯的中英双语全文阅读稿。
+    purpose_en: Turns PDFs, DOIs, arXiv papers, or pasted text into figure-aware, source-grounded bilingual full-paper readers.
+    platforms: [Claude Code, Codex, OpenClaw, OpenCode, Hermes]
+    install_method: Host-specific manual install
+    install_command: git clone https://github.com/Yuan1z0825/nature-skills ~/ai-skills/nature-skills
+    install_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/README_EN.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 上游要求保留完整 Skill 目录及共享资源，不能只复制 SKILL.md。
+    notes_en: Upstream requires keeping the complete skill directory and shared assets, rather than copying SKILL.md alone.
+
+  - id: dailypaper-paper-reader
+    category: reading-knowledge
+    entry_type: skill
+    repository: huangkiki/dailypaper-skills
+    repository_url: https://github.com/huangkiki/dailypaper-skills
+    license: Apache-2.0
+    source_ref: ec6329c9ee6405f706d7a327937872ae75220774
+    skill: paper-reader
+    skill_path: skills/paper-reader/SKILL.md
+    source_url: https://github.com/huangkiki/dailypaper-skills/blob/ec6329c9ee6405f706d7a327937872ae75220774/skills/paper-reader/SKILL.md
+    purpose_zh: 面向计算机视觉与深度学习论文的精读、总结、批判性分析及 Zotero 论文读取。
+    purpose_en: Reads, summarizes, and critiques computer-vision and deep-learning papers, with optional Zotero integration.
+    platforms: [Claude Code]
+    install_method: Git clone and copy
+    install_command: >-
+      git clone https://github.com/huangkiki/dailypaper-skills &&
+      cp -r dailypaper-skills/skills/* ~/.claude/skills/
+    install_url: https://github.com/huangkiki/dailypaper-skills/blob/ec6329c9ee6405f706d7a327937872ae75220774/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 主分支面向 Claude Code；Codex 适配位于上游单独分支，本条未对该分支做条目级核验。
+    notes_en: The main branch targets Claude Code; the upstream Codex adaptation is on a separate branch and was not verified as part of this entry.
+
+  - id: snl-literature-survey
+    category: reading-knowledge
+    entry_type: skill
+    repository: SNL-UCSB/literature-survey-skill
+    repository_url: https://github.com/SNL-UCSB/literature-survey-skill
+    license: MIT
+    source_ref: 18475960526bc0f3a64bced026d11ccce97a521b
+    skill: survey
+    skill_path: SKILL.md
+    source_url: https://github.com/SNL-UCSB/literature-survey-skill/blob/18475960526bc0f3a64bced026d11ccce97a521b/SKILL.md
+    purpose_zh: 以 Intent、Triage、Deepen、Synthesize 四阶段组织 10–150 篇论文的分层阅读、证据摘录、跨论文矩阵与研究缺口分析。
+    purpose_en: Organizes 10–150 papers through Intent, Triage, Deepen, and Synthesize stages for depth-aware reading, grounded extraction, cross-paper matrices, and gap analysis.
+    platforms: [Claude Code, NotebookLM MCP CLI]
+    install_method: Setup script
+    install_command: >-
+      git clone https://github.com/SNL-UCSB/literature-survey-skill.git &&
+      cd literature-survey-skill && ./setup.sh
+    install_url: https://github.com/SNL-UCSB/literature-survey-skill/blob/18475960526bc0f3a64bced026d11ccce97a521b/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 依赖 NotebookLM MCP CLI 与相应账户认证；论文会上传到 NotebookLM，研究笔记和综合材料保存在本地。
+    notes_en: Requires NotebookLM MCP CLI and account authentication; papers are uploaded to NotebookLM while notes and synthesis artifacts remain local.
+
+  - id: cosen-llm-wiki-skill
+    category: reading-knowledge
+    entry_type: skill
+    repository: cosen1024/llm-wiki-skill
+    repository_url: https://github.com/cosen1024/llm-wiki-skill
+    license: MIT
+    source_ref: 2f200cd945021a56376794ffecb3b19174de6f85
+    skill: llm-wiki-skill
+    skill_path: SKILL.md
+    source_url: https://github.com/cosen1024/llm-wiki-skill/blob/2f200cd945021a56376794ffecb3b19174de6f85/SKILL.md
+    purpose_zh: 把论文、笔记和网页逐步编译为可交叉引用、可查询、可维护的持久 Markdown 知识库。
+    purpose_en: Incrementally compiles papers, notes, and web sources into a persistent, cross-linked, queryable Markdown knowledge base.
+    platforms: [Claude Code, Codex]
+    install_method: Repository entrypoint
+    install_command: ""
+    install_url: https://github.com/cosen1024/llm-wiki-skill/blob/2f200cd945021a56376794ffecb3b19174de6f85/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 这是通用知识管理 Skill，在科研场景中的价值是论文摄取、概念连接和知识库 lint；上游 README 未给一键安装命令。
+    notes_en: This is a general knowledge-management skill applied here to paper ingestion, concept linking, and wiki linting; the upstream README does not provide a one-line install command.
+
+  - id: auto-research-refine-pipeline
+    category: research-design
+    entry_type: skill
+    repository: zjYao36/Auto-Research-Refine
+    repository_url: https://github.com/zjYao36/Auto-Research-Refine
+    license: NOASSERTION
+    source_ref: a1f14495856afe1e400c65d84ce22f68a027ef75
+    skill: research-refine-pipeline
+    skill_path: research-refine-pipeline/SKILL.md
+    source_url: https://github.com/zjYao36/Auto-Research-Refine/blob/a1f14495856afe1e400c65d84ce22f68a027ef75/research-refine-pipeline/SKILL.md
+    purpose_zh: 把模糊研究方向依次收敛为可评审研究方案和详细实验路线图。
+    purpose_en: Refines a vague research direction into a reviewable proposal and a detailed experimental roadmap.
+    platforms: [Claude Code, Codex MCP optional]
+    install_method: Git clone and copy
+    install_command: >-
+      git clone https://github.com/zjYao36/Auto-Research-Refine &&
+      cp -r Auto-Research-Refine/research-refine Auto-Research-Refine/experiment-plan
+      Auto-Research-Refine/research-refine-pipeline ~/.claude/skills/
+    install_url: https://github.com/zjYao36/Auto-Research-Refine/blob/a1f14495856afe1e400c65d84ce22f68a027ef75/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 外部 reviewer 回路依赖可选的 Codex MCP；仓库根目录未发现许可证文件。
+    notes_en: The external reviewer loop optionally depends on Codex MCP; no repository-level license file was found.
+
+  - id: k-dense-experimental-design
+    category: research-design
+    entry_type: skill
+    repository: K-Dense-AI/scientific-agent-skills
+    repository_url: https://github.com/K-Dense-AI/scientific-agent-skills
+    license: MIT
+    source_ref: e12d68309994d5643c7c2ee00ce883f570916b7d
+    skill: experimental-design
+    skill_path: skills/experimental-design/SKILL.md
+    source_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/skills/experimental-design/SKILL.md
+    purpose_zh: 在收集数据前规划随机化、分组、区组、因子设计、重复与混杂控制。
+    purpose_en: Plans randomization, grouping, blocking, factorial designs, replication, and confounding control before data collection.
+    platforms: [Agent Skills, Claude Code, Codex, Gemini CLI, Cursor, OpenClaw]
+    install_method: Skills CLI
+    install_command: npx skills add K-Dense-AI/scientific-agent-skills
+    install_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 脚本要求 Python 3.10+，并使用 numpy、pandas 与 pyDOE3。
+    notes_en: Scripts require Python 3.10+ and use numpy, pandas, and pyDOE3.
+
+  - id: lingzhi-paper-to-code
+    category: experiment-code
+    entry_type: skill
+    repository: lingzhi227/agent-research-skills
+    repository_url: https://github.com/lingzhi227/agent-research-skills
+    license: NOASSERTION
+    source_ref: 9e6c085d65e313e475e921fdfe795ac11eb7589e
+    skill: paper-to-code
+    skill_path: skills/paper-to-code/SKILL.md
+    source_url: https://github.com/lingzhi227/agent-research-skills/blob/9e6c085d65e313e475e921fdfe795ac11eb7589e/skills/paper-to-code/SKILL.md
+    purpose_zh: 按规划、逐文件分析和依赖顺序生成三阶段流程，把机器学习论文转为可运行代码仓库。
+    purpose_en: Converts an ML paper into a runnable repository through planning, per-file analysis, and dependency-ordered implementation.
+    platforms: [Claude Code]
+    install_method: Skills CLI
+    install_command: npx skills add lingzhi227/agent-research-skills -g -a claude-code
+    install_url: https://github.com/lingzhi227/agent-research-skills/blob/9e6c085d65e313e475e921fdfe795ac11eb7589e/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 上游要求全局安装并运行 post-install 脚本；仓库根目录未发现许可证文件。
+    notes_en: Upstream requires global installation and a post-install script; no repository-level license file was found.
+
+  - id: jurgendn-reproducibility-audit
+    category: experiment-code
+    entry_type: skill
+    repository: jurgendn/agent-skills
+    repository_url: https://github.com/jurgendn/agent-skills
+    license: NOASSERTION
+    source_ref: ff8db273421cd0ec6cde55d84d802a4e9e5fdb26
+    skill: reproducibility-audit
+    skill_path: skills/research-skills/artifact-and-reproducibility/reproducibility-audit/SKILL.md
+    source_url: https://github.com/jurgendn/agent-skills/blob/ff8db273421cd0ec6cde55d84d802a4e9e5fdb26/skills/research-skills/artifact-and-reproducibility/reproducibility-audit/SKILL.md
+    purpose_zh: 审核代码、数据、配置、随机种子与文档是否足以复现目标结果，并定位断点。
+    purpose_en: Audits whether code, data, configuration, seeds, and documentation are sufficient to reproduce a target result.
+    platforms: [Agent Skills]
+    install_method: Repository installer
+    install_command: ./scripts/install.sh --skill reproducibility-audit
+    install_url: https://github.com/jurgendn/agent-skills/blob/ff8db273421cd0ec6cde55d84d802a4e9e5fdb26/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 安装命令需在克隆后的仓库根目录执行；仓库根目录未发现许可证文件。
+    notes_en: Run the install command from a cloned repository root; no repository-level license file was found.
+
+  - id: allenai-asta-analyze-data
+    category: data-analysis
+    entry_type: skill
+    repository: allenai/asta-plugins
+    repository_url: https://github.com/allenai/asta-plugins
+    license: Apache-2.0
+    source_ref: 1f9d837a48910a28a8f2aee23fc174db891ad234
+    skill: analyze-data
+    skill_path: plugins/asta-tools/skills/analyze-data/SKILL.md
+    source_url: https://github.com/allenai/asta-plugins/blob/1f9d837a48910a28a8f2aee23fc174db891ad234/plugins/asta-tools/skills/analyze-data/SKILL.md
+    purpose_zh: 用 DataVoyager 多代理流水线针对表格数据执行代码分析、生成图表并回答明确研究问题。
+    purpose_en: Uses the DataVoyager multi-agent pipeline to execute code, create artifacts, and answer a focused question over tabular data.
+    platforms: [Local coding agents, Claude Code, Agent Skills]
+    install_method: Skills CLI
+    install_command: npx skills add allenai/asta-plugins -g
+    install_url: https://github.com/allenai/asta-plugins/blob/1f9d837a48910a28a8f2aee23fc174db891ad234/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 数据会上传到 Asta 的 DataVoyager 工作区并需要 asta 登录；没有在本次核验中执行远程分析。
+    notes_en: Data is uploaded to an Asta DataVoyager workspace and requires Asta authentication; no remote analysis was executed during verification.
+
+  - id: k-dense-statistical-analysis
+    category: data-analysis
+    entry_type: skill
+    repository: K-Dense-AI/scientific-agent-skills
+    repository_url: https://github.com/K-Dense-AI/scientific-agent-skills
+    license: MIT
+    source_ref: e12d68309994d5643c7c2ee00ce883f570916b7d
+    skill: statistical-analysis
+    skill_path: skills/statistical-analysis/SKILL.md
+    source_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/skills/statistical-analysis/SKILL.md
+    purpose_zh: 指导检验选择、假设检查、效应量、功效分析、贝叶斯替代方案与 APA 风格报告。
+    purpose_en: Guides test selection, assumption checks, effect sizes, power analysis, Bayesian alternatives, and APA-style reporting.
+    platforms: [Agent Skills, Claude Code, Codex, Gemini CLI, Cursor, OpenClaw]
+    install_method: Skills CLI
+    install_command: npx skills add K-Dense-AI/scientific-agent-skills
+    install_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 适合研究数据分析与结果报告，不替代领域专家的统计审查。
+    notes_en: Intended for research analysis and reporting; it does not replace domain-expert statistical review.
+
+  - id: master-cai-research-paper-writing
+    category: paper-writing
+    entry_type: skill
+    repository: Master-cai/Research-Paper-Writing-Skills
+    repository_url: https://github.com/Master-cai/Research-Paper-Writing-Skills
+    license: MIT
+    source_ref: 77e7c2c1ba06f7d71844873147665437a03aac1b
+    skill: research-paper-writing
+    skill_path: research-paper-writing/SKILL.md
+    source_url: https://github.com/Master-cai/Research-Paper-Writing-Skills/blob/77e7c2c1ba06f7d71844873147665437a03aac1b/research-paper-writing/SKILL.md
+    purpose_zh: 为 ML、CV、NLP 论文提供章节结构、段落流、论据对齐和审稿人视角的写作与修订流程。
+    purpose_en: Supports ML, CV, and NLP paper drafting and revision through section structure, paragraph flow, claim alignment, and reviewer-facing presentation.
+    platforms: [Codex, Claude Code, Gemini]
+    install_method: Copy skill directory
+    install_command: cp -R research-paper-writing "$CODEX_HOME/skills/"
+    install_url: https://github.com/Master-cai/Research-Paper-Writing-Skills/blob/77e7c2c1ba06f7d71844873147665437a03aac1b/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: README 还提供 Claude Code 与 Gemini 的对应复制目录。
+    notes_en: The README also documents equivalent copy locations for Claude Code and Gemini.
+
+  - id: nature-writing
+    category: paper-writing
+    entry_type: skill
+    repository: Yuan1z0825/nature-skills
+    repository_url: https://github.com/Yuan1z0825/nature-skills
+    license: Apache-2.0
+    source_ref: 4170a8a6262642841699c55d468e21ff70a2fe34
+    skill: nature-writing
+    skill_path: skills/nature-writing/SKILL.md
+    source_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/skills/nature-writing/SKILL.md
+    purpose_zh: 基于作者提供的结论、结果、图表和笔记规划、起草或重构论文章节与整体论证。
+    purpose_en: Plans, drafts, or restructures manuscript sections and the overall argument from author-provided claims, results, figures, and notes.
+    platforms: [Claude Code, Codex, OpenClaw, OpenCode, Hermes]
+    install_method: Host-specific manual install
+    install_command: git clone https://github.com/Yuan1z0825/nature-skills ~/ai-skills/nature-skills
+    install_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/README_EN.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 上游强调不得编造结果、引用或未提供的证据。
+    notes_en: Upstream explicitly requires source grounding and forbids inventing results, citations, or missing evidence.
+
+  - id: orchestra-ml-paper-writing
+    category: paper-writing
+    entry_type: skill
+    repository: Orchestra-Research/AI-Research-SKILLs
+    repository_url: https://github.com/Orchestra-Research/AI-Research-SKILLs
+    license: MIT
+    source_ref: 773a52944ba4747a18bd4ae9ade53fff041adcbc
+    skill: ml-paper-writing
+    skill_path: 20-ml-paper-writing/ml-paper-writing/SKILL.md
+    source_url: https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/20-ml-paper-writing/ml-paper-writing/SKILL.md
+    purpose_zh: 从研究代码仓组织顶级 ML/AI 会议论文的论证、引用、LaTeX 草稿与 camera-ready 准备。
+    purpose_en: Structures arguments, citations, LaTeX drafts, and camera-ready preparation for top ML and AI venues from a research repository.
+    platforms: [Claude Code, Cursor, Gemini CLI, OpenCode, Hermes]
+    install_method: Orchestra installer
+    install_command: npx @orchestra-research/ai-research-skills
+    install_url: https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: Skill 声明了 Semantic Scholar、arXiv、habanero 与 requests 等依赖。
+    notes_en: The skill declares dependencies including Semantic Scholar, arXiv, habanero, and requests.
+
+  - id: norman-research-writing-assistant
+    category: paper-writing
+    entry_type: skill-suite
+    repository: Norman-bury/research-writing-skill
+    repository_url: https://github.com/Norman-bury/research-writing-skill
+    license: MIT
+    source_ref: 6f7959554b4614d879d79cb4ece9ed04a7c8a88c
+    skill: research-writing-assistant
+    skill_path: SKILL.md
+    source_url: https://github.com/Norman-bury/research-writing-skill/blob/6f7959554b4614d879d79cb4ece9ed04a7c8a88c/SKILL.md
+    purpose_zh: 以路由、头脑风暴、分章写作、证据驱动引言、实验结果规划、LaTeX、统计和自审模块组织毕业论文与研究文章写作。
+    purpose_en: Organizes thesis and research-article work through routing, brainstorming, chapter drafting, evidence-driven introductions, experiment planning, LaTeX, statistics, and self-review modules.
+    platforms: [Claude Code, Codex, Cursor, OpenCode, Gemini CLI]
+    install_method: Git clone and host setup
+    install_command: git clone https://github.com/Norman-bury/research-writing-skill.git
+    install_url: https://github.com/Norman-bury/research-writing-skill/blob/6f7959554b4614d879d79cb4ece9ed04a7c8a88c/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 核验时该 URL 仍是独立公开的 v3.1.0 仓库，并未重定向到 ResearchPilot-Skills；两者在本清单中分别记录。
+    notes_en: At verification time this URL remained a separate public v3.1.0 repository and did not redirect to ResearchPilot-Skills; the catalog records them separately.
+
+  - id: nature-paper-workflow
+    category: paper-writing
+    entry_type: skill-suite
+    repository: Boom5426/Nature-Paper-Skills
+    repository_url: https://github.com/Boom5426/Nature-Paper-Skills
+    license: MIT
+    source_ref: edf232f534d859d3db38b48654f50bfa5023dd90
+    skill: paper-workflow
+    skill_path: skills/core/paper-workflow/SKILL.md
+    source_url: https://github.com/Boom5426/Nature-Paper-Skills/blob/edf232f534d859d3db38b48654f50bfa5023dd90/skills/core/paper-workflow/SKILL.md
+    purpose_zh: 为 Nature 系列稿件路由初稿搭建、证据链修订、图文同步、统计与引用审计、投稿预检及审稿回复等专用 Skill。
+    purpose_en: Routes Nature-series manuscripts across project bootstrap, evidence-chain revision, figure-text alignment, statistical and citation audits, submission checks, and reviewer response skills.
+    platforms: [Codex, Claude Code]
+    install_method: Clone and copy recommended skills
+    install_url: https://github.com/Boom5426/Nature-Paper-Skills/blob/edf232f534d859d3db38b48654f50bfa5023dd90/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 默认采用期刊优先、Nature 风格路线；推荐安装集需复制完整 Skill 目录，可选绘图栈另有 Python、R 或 API 依赖。
+    notes_en: Defaults to a journal-first, Nature-oriented route. The recommended set requires complete skill directories; the optional figure stack adds Python, R, or API dependencies.
+
+  - id: k-dense-claude-scientific-writer
+    category: paper-writing
+    entry_type: plugin
+    repository: K-Dense-AI/claude-scientific-writer
+    repository_url: https://github.com/K-Dense-AI/claude-scientific-writer
+    license: MIT
+    source_ref: 44414bded0ea850658aac59c014f3d6bec6d1ca8
+    skill: scientific-writing
+    skill_path: skills/scientific-writing/SKILL.md
+    source_url: https://github.com/K-Dense-AI/claude-scientific-writer/blob/44414bded0ea850658aac59c014f3d6bec6d1ca8/skills/scientific-writing/SKILL.md
+    purpose_zh: 通过实时检索、两阶段 IMRAD 写作、引用管理、报告规范、图表与 LaTeX 输出生成论文、综述、基金和科研报告。
+    purpose_en: Generates papers, reviews, grants, and scientific reports through live research, two-stage IMRAD drafting, citation management, reporting guidelines, figures, and LaTeX output.
+    platforms: [Claude Code plugin, Python CLI, Python API]
+    install_method: PyPI
+    install_command: pip install scientific-writer
+    install_url: https://github.com/K-Dense-AI/claude-scientific-writer/blob/44414bded0ea850658aac59c014f3d6bec6d1ca8/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 核心写作需要 Anthropic API；联网研究需要 Parallel API，生图可选 OpenRouter。上游写作规则强制大量 AI 图，使用前应按目标期刊和真实证据人工裁剪。
+    notes_en: Core writing requires the Anthropic API; live research requires the Parallel API, while image generation can use OpenRouter. Upstream rules mandate extensive AI-generated figures, which should be manually constrained to venue and evidence needs.
+
+  - id: nature-polishing
+    category: polishing-translation
+    entry_type: skill
+    repository: Yuan1z0825/nature-skills
+    repository_url: https://github.com/Yuan1z0825/nature-skills
+    license: Apache-2.0
+    source_ref: 4170a8a6262642841699c55d468e21ff70a2fe34
+    skill: nature-polishing
+    skill_path: skills/nature-polishing/SKILL.md
+    source_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/skills/nature-polishing/SKILL.md
+    purpose_zh: 润色、重构或中译英学术文本，并处理 overclaim、语言策略和部分 LaTeX 排版问题。
+    purpose_en: Polishes, restructures, or translates academic prose while addressing overclaiming, writing strategy, and selected LaTeX layout issues.
+    platforms: [Claude Code, Codex, OpenClaw, OpenCode, Hermes]
+    install_method: Host-specific manual install
+    install_command: git clone https://github.com/Yuan1z0825/nature-skills ~/ai-skills/nature-skills
+    install_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/README_EN.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 需要保留 references、static、脚本与共享目录以获得完整行为。
+    notes_en: Keep references, static resources, scripts, and shared directories for full behavior.
+
+  - id: wentor-academic-translation-guide
+    category: polishing-translation
+    entry_type: skill
+    repository: wentorai/research-plugins
+    repository_url: https://github.com/wentorai/research-plugins
+    license: MIT
+    source_ref: bf44b3cd617fa94c8a1b254c5d1987142ca3d631
+    skill: academic-translation-guide
+    skill_path: skills/writing/polish/academic-translation-guide/SKILL.md
+    source_url: https://github.com/wentorai/research-plugins/blob/bf44b3cd617fa94c8a1b254c5d1987142ca3d631/skills/writing/polish/academic-translation-guide/SKILL.md
+    purpose_zh: 提供学术翻译、译后编辑与中式英语修正的流程和检查点。
+    purpose_en: Provides a workflow and checkpoints for academic translation, post-editing, and Chinglish correction.
+    platforms: [OpenClaw, Claude Code, Cursor, Windsurf, OpenCode]
+    install_method: Skills CLI
+    install_command: npx skills add wentorai/research-plugins
+    install_url: https://github.com/wentorai/research-plugins/blob/bf44b3cd617fa94c8a1b254c5d1987142ca3d631/README.en.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: OpenClaw 另有插件安装方式；本条记录跨 Agent 的 Skills CLI 入口。
+    notes_en: OpenClaw also has a plugin installation path; this entry records the cross-agent Skills CLI route.
+
+  - id: academic-writing-bib-search-citation
+    category: citation-latex
+    entry_type: skill
+    repository: bahayonghang/academic-writing-skills
+    repository_url: https://github.com/bahayonghang/academic-writing-skills
+    license: LicenseRef-Academic-Use-Only
+    source_ref: 1c04e89cbac219661ef026a34ca5805a357d7c21
+    skill: bib-search-citation
+    skill_path: academic-writing-skills/bib-search-citation/SKILL.md
+    source_url: https://github.com/bahayonghang/academic-writing-skills/blob/1c04e89cbac219661ef026a34ca5805a357d7c21/academic-writing-skills/bib-search-citation/SKILL.md
+    purpose_zh: 在本地 BibTeX/BibLaTeX 与 Zotero 导出库中检索、筛选并生成 LaTeX 或 Typst 引用片段。
+    purpose_en: Searches and filters local BibTeX, BibLaTeX, and Zotero exports and generates LaTeX or Typst citation snippets.
+    platforms: [Claude Code, Codex]
+    install_method: Skills CLI
+    install_command: npx skills add bahayonghang/academic-writing-skills
+    install_url: https://github.com/bahayonghang/academic-writing-skills/blob/1c04e89cbac219661ef026a34ca5805a357d7c21/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 仓库声明仅限学术用途、禁止商业使用；这不是 OSI 标准开源许可证。
+    notes_en: The repository states academic use only and prohibits commercial use; this is not an OSI-approved open-source license.
+
+  - id: academic-writing-latex-paper-en
+    category: citation-latex
+    entry_type: skill
+    repository: bahayonghang/academic-writing-skills
+    repository_url: https://github.com/bahayonghang/academic-writing-skills
+    license: LicenseRef-Academic-Use-Only
+    source_ref: 1c04e89cbac219661ef026a34ca5805a357d7c21
+    skill: latex-paper-en
+    skill_path: academic-writing-skills/latex-paper-en/SKILL.md
+    source_url: https://github.com/bahayonghang/academic-writing-skills/blob/1c04e89cbac219661ef026a34ca5805a357d7c21/academic-writing-skills/latex-paper-en/SKILL.md
+    purpose_zh: 修复英文论文的 LaTeX 编译与格式问题，并检查引用、章节逻辑、表格、伪代码和投稿准备。
+    purpose_en: Repairs and improves English LaTeX papers, covering compilation, formatting, citations, section logic, tables, pseudocode, and submission readiness.
+    platforms: [Claude Code, Codex]
+    install_method: Skills CLI
+    install_command: npx skills add bahayonghang/academic-writing-skills
+    install_url: https://github.com/bahayonghang/academic-writing-skills/blob/1c04e89cbac219661ef026a34ca5805a357d7c21/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 面向已有 .tex 稿件；许可证限制同仓库说明。
+    notes_en: Intended for existing .tex manuscripts; the repository's academic-use-only restriction applies.
+
+  - id: serena-citation-check
+    category: citation-latex
+    entry_type: skill
+    repository: serenakeyitan/citation-check-skill
+    repository_url: https://github.com/serenakeyitan/citation-check-skill
+    license: MIT
+    source_ref: b9deb7077099f56b05c9b6ecea744c2ca0a6d324
+    skill: citation-check-skill
+    skill_path: SKILL.md
+    source_url: https://github.com/serenakeyitan/citation-check-skill/blob/b9deb7077099f56b05c9b6ecea744c2ca0a6d324/SKILL.md
+    purpose_zh: 先固定提取文档、幻灯片、PDF 或图像中的全部可核验 claim，再逐条用网络或用户文档检查引用存在性、数字和 claim–source 对齐。
+    purpose_en: Freezes an exhaustive claim list from documents, slides, PDFs, or images, then checks citations, numbers, and claim-source alignment against the web or user-provided documents.
+    platforms: [Claude Code, Claude.ai Skills, Codex]
+    install_method: GitHub release archive
+    install_url: https://github.com/serenakeyitan/citation-check-skill/blob/b9deb7077099f56b05c9b6ecea744c2ca0a6d324/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 这是基于提示词的两遍核验流程，不是可证明确定性的程序；联网搜索、精确数字规则和最终判定仍需人工复核。
+    notes_en: This is a prompt-driven two-pass workflow, not a provably deterministic checker; web search, exact-number rules, and final verdicts still require human review.
+
+  - id: latex-paper-from-zero
+    category: citation-latex
+    entry_type: skill-suite
+    repository: yunshenwuchuxun/latex-paper-skills
+    repository_url: https://github.com/yunshenwuchuxun/latex-paper-skills
+    license: MIT
+    source_ref: d0f106108cb09e448604a56ce973d35b340cf497
+    skill: paper-from-zero
+    skill_path: .codex/skills/paper-from-zero/SKILL.md
+    source_url: https://github.com/yunshenwuchuxun/latex-paper-skills/blob/d0f106108cb09e448604a56ce973d35b340cf497/.codex/skills/paper-from-zero/SKILL.md
+    purpose_zh: 从固定主题建立文献地图、创新与贡献框架、claim–evidence 矩阵和大纲契约，再路由到综述或实证论文的 LaTeX 写作与结果回填流程。
+    purpose_en: Builds a literature map, innovation and contribution framing, claim-evidence matrix, and outline contract from a fixed topic before routing to review or empirical LaTeX writing and result backfill.
+    platforms: [Codex, Agent Skills, Claude Code, Gemini CLI]
+    install_method: Repository workflow entry
+    install_command: git clone https://github.com/yunshenwuchuxun/latex-paper-skills.git
+    install_url: https://github.com/yunshenwuchuxun/latex-paper-skills/blob/d0f106108cb09e448604a56ce973d35b340cf497/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 上游公开了综述和实证论文示例，但明确说明测试覆盖仍有限；需要 Python 和 LaTeX，跨模型协作为可选项。
+    notes_en: Upstream includes public review and empirical showcases but explicitly says test coverage remains limited; Python and LaTeX are required, while cross-model collaboration is optional.
+
+  - id: orchestra-academic-plotting
+    category: scientific-plotting
+    entry_type: skill
+    repository: Orchestra-Research/AI-Research-SKILLs
+    repository_url: https://github.com/Orchestra-Research/AI-Research-SKILLs
+    license: MIT
+    source_ref: 773a52944ba4747a18bd4ae9ade53fff041adcbc
+    skill: academic-plotting
+    skill_path: 20-ml-paper-writing/academic-plotting/SKILL.md
+    source_url: https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/20-ml-paper-writing/academic-plotting/SKILL.md
+    purpose_zh: 从论文上下文或实验数据生成架构图与 matplotlib/seaborn 论文图，并自动选择图表类型。
+    purpose_en: Generates architecture diagrams and matplotlib/seaborn paper figures from manuscript context or experiment data, with chart-type selection.
+    platforms: [Claude Code, Cursor, Gemini CLI, OpenCode, Hermes]
+    install_method: Orchestra installer
+    install_command: npx @orchestra-research/ai-research-skills
+    install_url: https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 架构图流程声明使用 Gemini，并需要相关 API 与 Python 绘图库。
+    notes_en: The architecture-diagram workflow declares a Gemini dependency and requires the relevant API and Python plotting libraries.
+
+  - id: k-dense-scientific-visualization
+    category: scientific-plotting
+    entry_type: skill
+    repository: K-Dense-AI/scientific-agent-skills
+    repository_url: https://github.com/K-Dense-AI/scientific-agent-skills
+    license: MIT
+    source_ref: e12d68309994d5643c7c2ee00ce883f570916b7d
+    skill: scientific-visualization
+    skill_path: skills/scientific-visualization/SKILL.md
+    source_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/skills/scientific-visualization/SKILL.md
+    purpose_zh: 生成多面板、带误差线与显著性标注、色盲友好并符合期刊规格的投稿级图表。
+    purpose_en: Produces journal-ready multi-panel figures with error bars, significance annotations, colorblind-safe palettes, and venue formatting.
+    platforms: [Agent Skills, Claude Code, Codex, Gemini CLI, Cursor, OpenClaw]
+    install_method: Skills CLI
+    install_command: npx skills add K-Dense-AI/scientific-agent-skills
+    install_url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/e12d68309994d5643c7c2ee00ce883f570916b7d/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 使用 matplotlib、seaborn 与 plotly，并支持 PDF/EPS/TIFF 导出指导。
+    notes_en: Uses matplotlib, seaborn, and plotly and documents PDF, EPS, and TIFF export.
+
+  - id: academic-writing-paper-audit
+    category: pre-submission
+    entry_type: skill
+    repository: bahayonghang/academic-writing-skills
+    repository_url: https://github.com/bahayonghang/academic-writing-skills
+    license: LicenseRef-Academic-Use-Only
+    source_ref: 1c04e89cbac219661ef026a34ca5805a357d7c21
+    skill: paper-audit
+    skill_path: academic-writing-skills/paper-audit/SKILL.md
+    source_url: https://github.com/bahayonghang/academic-writing-skills/blob/1c04e89cbac219661ef026a34ca5805a357d7c21/academic-writing-skills/paper-audit/SKILL.md
+    purpose_zh: 对 .tex、.typ 或 .pdf 稿件做审稿人式诊断、投稿门控、阻塞项分级和修订路线图。
+    purpose_en: Performs reviewer-style diagnosis, submission gates, blocker triage, and revision roadmaps for .tex, .typ, or .pdf manuscripts.
+    platforms: [Claude Code, Codex]
+    install_method: Skills CLI
+    install_command: npx skills add bahayonghang/academic-writing-skills
+    install_url: https://github.com/bahayonghang/academic-writing-skills/blob/1c04e89cbac219661ef026a34ca5805a357d7c21/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 审计报告仅供参考；许可证限制同仓库说明。
+    notes_en: Audit reports are advisory; the repository's academic-use-only restriction applies.
+
+  - id: lingzhi-self-review
+    category: pre-submission
+    entry_type: skill
+    repository: lingzhi227/agent-research-skills
+    repository_url: https://github.com/lingzhi227/agent-research-skills
+    license: NOASSERTION
+    source_ref: 9e6c085d65e313e475e921fdfe795ac11eb7589e
+    skill: self-review
+    skill_path: skills/self-review/SKILL.md
+    source_url: https://github.com/lingzhi227/agent-research-skills/blob/9e6c085d65e313e475e921fdfe795ac11eb7589e/skills/self-review/SKILL.md
+    purpose_zh: 以 NeurIPS 审稿表和三个审稿人角色对 PDF 或 LaTeX 稿件做集成自审与反思修正。
+    purpose_en: Runs an ensemble self-review of PDF or LaTeX manuscripts using the NeurIPS form, three reviewer personas, and reflection refinement.
+    platforms: [Claude Code]
+    install_method: Skills CLI
+    install_command: npx skills add lingzhi227/agent-research-skills -g -a claude-code
+    install_url: https://github.com/lingzhi227/agent-research-skills/blob/9e6c085d65e313e475e921fdfe795ac11eb7589e/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: PDF 解析需要 PyMuPDF 相关依赖；仓库根目录未发现许可证文件。
+    notes_en: PDF parsing requires PyMuPDF-related dependencies; no repository-level license file was found.
+
+  - id: ars-academic-paper-reviewer
+    category: peer-review-response
+    entry_type: skill
+    repository: Imbad0202/academic-research-skills
+    repository_url: https://github.com/Imbad0202/academic-research-skills
+    license: CC-BY-NC-4.0
+    source_ref: 2aabdf6d56ade6e4e5e52eb468f9c6c4d392988d
+    skill: academic-paper-reviewer
+    skill_path: academic-paper-reviewer/SKILL.md
+    source_url: https://github.com/Imbad0202/academic-research-skills/blob/2aabdf6d56ade6e4e5e52eb468f9c6c4d392988d/academic-paper-reviewer/SKILL.md
+    purpose_zh: 用主编、三位同行评审者和 Devil's Advocate 等动态角色执行多视角论文评审。
+    purpose_en: Performs multi-perspective manuscript review with dynamic editor, peer-reviewer, and Devil's Advocate personas.
+    platforms: [Claude Code, Claude.ai import]
+    install_method: Claude Code plugin
+    install_command: >-
+      /plugin marketplace add Imbad0202/academic-research-skills ;
+      /plugin install academic-research-skills
+    install_url: https://github.com/Imbad0202/academic-research-skills/blob/2aabdf6d56ade6e4e5e52eb468f9c6c4d392988d/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 仓库许可证禁止商业使用；插件级能力主要针对 Claude Code。
+    notes_en: The repository license prohibits commercial use; full plugin functionality primarily targets Claude Code.
+
+  - id: nature-response
+    category: peer-review-response
+    entry_type: skill
+    repository: Yuan1z0825/nature-skills
+    repository_url: https://github.com/Yuan1z0825/nature-skills
+    license: Apache-2.0
+    source_ref: 4170a8a6262642841699c55d468e21ff70a2fe34
+    skill: nature-response
+    skill_path: skills/nature-response/SKILL.md
+    source_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/skills/nature-response/SKILL.md
+    purpose_zh: 起草、审计或修订逐点审稿回复、rebuttal、修订 cover letter 与标注修改稿片段。
+    purpose_en: Drafts, audits, or revises point-by-point responses, rebuttals, revision cover letters, and marked manuscript excerpts.
+    platforms: [Claude Code, Codex, OpenClaw, OpenCode, Hermes]
+    install_method: Host-specific manual install
+    install_command: git clone https://github.com/Yuan1z0825/nature-skills ~/ai-skills/nature-skills
+    install_url: https://github.com/Yuan1z0825/nature-skills/blob/4170a8a6262642841699c55d468e21ff70a2fe34/README_EN.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 需要用户提供审稿意见、编辑决定和证据；不得虚构新增实验或修改。
+    notes_en: Requires reviewer comments, editorial decisions, and evidence; it must not invent experiments or revisions.
+
+  - id: ars-academic-pipeline
+    category: end-to-end
+    entry_type: skill
+    repository: Imbad0202/academic-research-skills
+    repository_url: https://github.com/Imbad0202/academic-research-skills
+    license: CC-BY-NC-4.0
+    source_ref: 2aabdf6d56ade6e4e5e52eb468f9c6c4d392988d
+    skill: academic-pipeline
+    skill_path: academic-pipeline/SKILL.md
+    source_url: https://github.com/Imbad0202/academic-research-skills/blob/2aabdf6d56ade6e4e5e52eb468f9c6c4d392988d/academic-pipeline/SKILL.md
+    purpose_zh: 编排研究、写作、完整性检查、评审、修订、复审和最终定稿的十阶段流水线。
+    purpose_en: Orchestrates a ten-stage pipeline spanning research, writing, integrity checks, review, revision, re-review, and finalization.
+    platforms: [Claude Code, Claude.ai import]
+    install_method: Claude Code plugin
+    install_command: >-
+      /plugin marketplace add Imbad0202/academic-research-skills ;
+      /plugin install academic-research-skills
+    install_url: https://github.com/Imbad0202/academic-research-skills/blob/2aabdf6d56ade6e4e5e52eb468f9c6c4d392988d/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 依赖同仓库的 deep-research、academic-paper 与 academic-paper-reviewer；许可证禁止商业使用。
+    notes_en: Depends on deep-research, academic-paper, and academic-paper-reviewer from the same repository; the license prohibits commercial use.
+
+  - id: scholaraio-skill-suite
+    category: end-to-end
+    entry_type: skill-suite
+    repository: ZimoLiao/scholaraio
+    repository_url: https://github.com/ZimoLiao/scholaraio
+    license: MIT
+    source_ref: 0b1f5536e772bf21ff946e68b7b8eeb032febc40
+    skill: ScholarAIO skill suite
+    skill_path: .claude/skills/setup/SKILL.md
+    source_url: https://github.com/ZimoLiao/scholaraio/blob/0b1f5536e772bf21ff946e68b7b8eeb032febc40/.claude/skills/setup/SKILL.md
+    purpose_zh: 为编码 Agent 提供论文库、检索、摄取、知识图谱、科学软件、写作和引用检查的一体化科研工作区。
+    purpose_en: Provides coding agents with an integrated research workspace for paper libraries, search, ingestion, knowledge graphs, scientific tools, writing, and citation checks.
+    platforms: [Claude Code, Codex, OpenClaw, Cline, Qwen, Cursor, Windsurf, GitHub Copilot]
+    install_method: Python package and agent setup
+    install_command: >-
+      git clone https://github.com/ZimoLiao/scholaraio && cd scholaraio &&
+      pip install -e ".[full]" && scholaraio setup
+    install_url: https://github.com/ZimoLiao/scholaraio/blob/0b1f5536e772bf21ff946e68b7b8eeb032febc40/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 这是带 CLI、运行时和多组 Skills 的完整项目，不是单文件 Skill；source_url 指向其可核验的 setup Skill。
+    notes_en: This is a full project with a CLI, runtime, and multiple skills rather than a single loose skill; source_url points to its verifiable setup skill.
+
+  - id: open-academic-paper-machine
+    category: end-to-end
+    entry_type: plugin
+    repository: TobiasBlask/open-paper-machine
+    repository_url: https://github.com/TobiasBlask/open-paper-machine
+    license: MIT
+    source_ref: 160df4d13d266411f0850c4de7ecdbd93e8b40be
+    skill: Open Academic Paper Machine
+    skill_path: skills/writing-engine/SKILL.md
+    source_url: https://github.com/TobiasBlask/open-paper-machine/blob/160df4d13d266411f0850c4de7ecdbd93e8b40be/skills/writing-engine/SKILL.md
+    purpose_zh: 以 Claude Code 插件编排选题、文献、方法、写作、图表、LaTeX、验证、同行评审和投稿引擎。
+    purpose_en: A Claude Code plugin that orchestrates ideation, literature, methods, writing, figures, LaTeX, verification, peer review, and submission engines.
+    platforms: [Claude Code plugin]
+    install_method: Claude Code plugin
+    install_command: >-
+      /plugin marketplace add TobiasBlask/open-paper-machine ;
+      /plugin install open-academic-paper-machine@open-paper-machine
+    install_url: https://github.com/TobiasBlask/open-paper-machine/blob/160df4d13d266411f0850c4de7ecdbd93e8b40be/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 完整功能还需要 paperbanana、academic-search-mcp 和 LaTeX；source_url 指向其多个引擎中的 writing-engine。
+    notes_en: Full functionality also requires paperbanana, academic-search-mcp, and LaTeX; source_url points to the writing-engine among its bundled engines.
+
+  - id: paperspine-orchestrator
+    category: end-to-end
+    entry_type: skill-suite
+    repository: WUBING2023/PaperSpine
+    repository_url: https://github.com/WUBING2023/PaperSpine
+    license: MIT
+    source_ref: d4529208cda72aa075767611b0265b95b709b550
+    skill: paper-spine
+    skill_path: src/skill/SKILL.md
+    source_url: https://github.com/WUBING2023/PaperSpine/blob/d4529208cda72aa075767611b0265b95b709b550/src/skill/SKILL.md
+    purpose_zh: 用贡献优先、结果验证贡献和审稿人视角的 12 阶段硬关卡，从材料或已有稿件生成可审计的 LaTeX、PDF、Word、投稿与回复产物。
+    purpose_en: Uses a 12-stage, contribution-first, results-as-validation, reviewer-aware gate system to turn materials or drafts into auditable LaTeX, PDF, Word, submission, and response artifacts.
+    platforms: [Claude Code, Codex, OpenClaw, Hermes CLI]
+    install_method: Cross-host installer
+    install_command: >-
+      git clone https://github.com/WUBING2023/PaperSpine.git &&
+      cd PaperSpine && bash install.sh
+    install_url: https://github.com/WUBING2023/PaperSpine/blob/d4529208cda72aa075767611b0265b95b709b550/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: src/skill 是唯一真源，dist 为生成的宿主适配；安装器会写入多个 Agent 的用户级目录，执行前应检查目标路径。
+    notes_en: src/skill is the single source of truth and dist contains generated host adapters; the installer writes to several agents' user-level directories, so inspect target paths first.
+
+  - id: ars-codex-academic-research-suite
+    category: end-to-end
+    entry_type: skill-suite
+    repository: Imbad0202/academic-research-skills-codex
+    repository_url: https://github.com/Imbad0202/academic-research-skills-codex
+    license: CC-BY-NC-4.0
+    source_ref: 73ab70ad071ea51357a52086e705e3b766cbc5b2
+    skill: academic-research-suite
+    skill_path: skills/academic-research-suite/SKILL.md
+    source_url: https://github.com/Imbad0202/academic-research-skills-codex/blob/73ab70ad071ea51357a52086e705e3b766cbc5b2/skills/academic-research-suite/SKILL.md
+    purpose_zh: 以 Codex 原生单路由 Skill 编排深度研究、论文写作、评审、完整流水线和实验规划，并保留上游 ARS 的证据、完整性与安全边界。
+    purpose_en: Packages deep research, paper writing, review, full pipelines, and experiment planning behind one Codex-native router while retaining upstream ARS evidence, integrity, and safety boundaries.
+    platforms: [Codex CLI, Codex Desktop]
+    install_method: Codex skill installer
+    install_command: >-
+      python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py"
+      --repo Imbad0202/academic-research-skills-codex --ref main
+      --path skills/academic-research-suite --method git
+    install_url: https://github.com/Imbad0202/academic-research-skills-codex/blob/73ab70ad071ea51357a52086e705e3b766cbc5b2/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 这是 Claude Code 版 ARS 的独立 Codex 适配仓库；许可证为 CC BY-NC 4.0，禁止商业使用。可选多 Agent 与跨模型功能默认关闭。
+    notes_en: This is the separate Codex adaptation of the Claude Code ARS suite; CC BY-NC 4.0 prohibits commercial use. Optional multi-agent and cross-model features are disabled by default.
+
+  - id: researchpilot-skills-router
+    category: end-to-end
+    entry_type: skill-suite
+    repository: LMDHQ-0420/ResearchPilot-Skills
+    repository_url: https://github.com/LMDHQ-0420/ResearchPilot-Skills
+    license: MIT
+    source_ref: 416d9b77e231bdaec2879a5ded12dafa238e0911
+    skill: ResearchPilot-Skills v2.0 router
+    skill_path: skills/ResearchPilot-Skills-zh/research[START]/SKILL.md
+    source_url: https://github.com/LMDHQ-0420/ResearchPilot-Skills/blob/416d9b77e231bdaec2879a5ded12dafa238e0911/skills/ResearchPilot-Skills-zh/research%5BSTART%5D/SKILL.md
+    purpose_zh: 通过中英双语阶段 Skill 将方向探索、Idea 深化、实验与实现设计、编码迭代以及分章节论文写作串成可恢复的项目文件流程。
+    purpose_en: Connects bilingual stage skills for direction exploration, idea refinement, experiment and implementation design, coding iteration, and section-by-section paper writing into a resumable project-file workflow.
+    platforms: [Claude Code, Codex, CodeBuddy]
+    install_method: Language and host installer
+    install_command: >-
+      git clone https://github.com/LMDHQ-0420/ResearchPilot-Skills.git &&
+      cd ResearchPilot-Skills && bash install-zh.sh
+    install_url: https://github.com/LMDHQ-0420/ResearchPilot-Skills/blob/416d9b77e231bdaec2879a5ded12dafa238e0911/README.md
+    verification_status: verified
+    verified_at: 2026-07-13
+    notes_zh: 默认命令安装中文版到 Claude Code；Codex 使用 bash install-zh.sh codex。该仓库与仍公开的 Norman-bury/research-writing-skill 没有可核验的 GitHub 重定向关系。
+    notes_en: The default command installs Chinese skills for Claude Code; Codex uses bash install-zh.sh codex. No verifiable GitHub redirect links this repository to the still-public Norman-bury/research-writing-skill repository.
